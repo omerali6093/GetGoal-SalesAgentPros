@@ -1,0 +1,20 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Node.js / Express / MongoDB backend for the SalesPilot AI sales intelligence\r platform, with a **free, self-hostable LLM** (Ollama) and a **Retrieval-Augmented\r Generation (RAG)** layer for generating opportunity insights and outreach drafts.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.3",
+    "express": "^5.2.1",
+    "helmet": "^8.3.0",
+    "mongoose": "^9.10.2",
+    "morgan": "^1.12.1"
+  }
+}
