@@ -55,10 +55,7 @@ export default function Topbar({ onOpenMobile }) {
 
       <div className="flex-1" />
 
-      <button className="relative text-ink-muted hover:text-ink transition-colors">
-        <Bell size={18} />
-        <span className="absolute -top-1 -right-1 w-2 h-2 rounded-full bg-state-danger" />
-      </button>
+    
 
       <button
         onClick={() => navigate('/discover')}
@@ -68,9 +65,7 @@ export default function Topbar({ onOpenMobile }) {
         Start New Search
       </button>
 
-      <div className="w-8 h-8 rounded-full bg-gradient-to-br from-brand to-brand-accent flex items-center justify-center text-xs font-semibold text-white shrink-0">
-        OM
-      </div>
+      
     </header>
   )
 }

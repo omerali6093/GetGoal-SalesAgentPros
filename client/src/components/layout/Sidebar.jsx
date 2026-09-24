@@ -10,12 +10,8 @@ const navItems = [
   { to: '/', label: 'Dashboard', icon: LayoutDashboard, end: true },
   { to: '/discover', label: 'Discover Leads', icon: Search },
   { to: '/businesses', label: 'Businesses', icon: Building2 },
-  { to: '/opportunities', label: 'Opportunities', icon: Target },
   { to: '/website-audit', label: 'Website Audits', icon: ShieldCheck },
-  { to: '/campaigns', label: 'Campaigns', icon: Megaphone },
   { to: '/outreach', label: 'Outreach', icon: Send },
-  { to: '/analytics', label: 'Analytics', icon: BarChart3 },
-  { to: '/settings', label: 'Settings', icon: Settings },
 ]
 
 export default function Sidebar({ collapsed, onToggle, mobileOpen, onCloseMobile }) {
