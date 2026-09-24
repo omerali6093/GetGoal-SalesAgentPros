@@ -34,18 +34,14 @@ export default function Sidebar({ collapsed, onToggle, mobileOpen, onCloseMobile
           ${mobileOpen ? 'left-0' : '-left-[260px] lg:left-0'}
         `}
       >
-        <div className="flex items-center gap-2.5 h-16 px-5 border-b border-border shrink-0">
+        <div className="flex items-center gap-2.5 h-16 px-5 border-b border-border ">
           {/* <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-brand to-brand-accent flex items-center justify-center shrink-0"> */}
             {/* <Radar size={17} className="text-white" /> */}
-            <div className='w-26 h-30'>
-            <img src={logo} alt="" />
+            <div className='flex items-center p-7 '>
+            <img src={logo} alt="" className='w-30 h-20'/>
             </div>
           {/* </div> */}
-          {!collapsed && (
-            <span className="font-semibold text-[15px] tracking-tight text-ink whitespace-nowrap">
-              GetGoal <span className="text-brand-accent">SalesAI</span>
-            </span>
-          )}
+          
         </div>
 
         <nav className="flex-1 overflow-y-auto py-4 px-3 space-y-1">

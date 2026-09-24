@@ -303,6 +303,20 @@ export function generateLinkedInDraft(biz) {
   }
 }
 
+export function generateFacebookDraft(biz) {
+  return {
+    subject: null,
+    body: `Hi ${biz.owner.split(' ')[0]}, I lead digital growth projects for local ${biz.industry.toLowerCase()} businesses. I noticed a few opportunities on ${biz.name}'s online presence that could translate into more bookings — would you be open to connecting and comparing notes?`,
+  }
+}
+
+export function generateInstagramDraft(biz) {
+  return {
+    subject: null,
+    body: `Hi ${biz.owner.split(' ')[0]}, I lead digital growth projects for local ${biz.industry.toLowerCase()} businesses. I noticed a few opportunities on ${biz.name}'s online presence that could translate into more bookings — would you be open to connecting and comparing notes?`,
+  }
+}
+
 // ---------- AI Agent live status ----------
 export const agentActivityLog = [
   { id: 1, text: 'Analyzed 24 businesses in Lahore, Pakistan', time: '2 min ago' },

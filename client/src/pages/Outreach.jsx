@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
-import { Mail, MessageCircle, Linkedin, RotateCcw, Wand2, Save, Star, Globe2, Search } from 'lucide-react'
+import { Mail, MessageCircle, Linkedin, RotateCcw, Wand2, Save, Star, Globe2, Search, Facebook, Instagram, InstagramIcon } from 'lucide-react'
 import PageHeader from '../components/ui/PageHeader.jsx'
 import Badge, { scoreVariant } from '../components/ui/Badge.jsx'
 import {
-  businesses, generateEmailDraft, generateWhatsAppDraft, generateLinkedInDraft,
+  businesses, generateEmailDraft, generateWhatsAppDraft, generateLinkedInDraft, generateFacebookDraft, 
+  generateInstagramDraft
 } from '../data/mockData.js'
 import { useToast } from '../components/ui/Toast.jsx'
 
@@ -12,6 +13,8 @@ const tabs = [
   { key: 'email', label: 'Email', icon: Mail },
   { key: 'whatsapp', label: 'WhatsApp', icon: MessageCircle },
   { key: 'linkedin', label: 'LinkedIn', icon: Linkedin },
+  { key: 'facebook', label: 'Facebook', icon: Facebook },
+  { key: 'instagram', label: 'Instagram', icon: InstagramIcon },
 ]
 
 function draftFor(tab, biz) {
