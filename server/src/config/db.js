@@ -1,7 +1,8 @@
 import mongoose from "mongoose";
 import { env } from "./env.js";
-
 import logger from "../utils/logger.js";
+
+mongoose.set('strictQuery', true)
 
 export async function connectDB() {
     try {
@@ -23,7 +24,7 @@ export async function connectDB() {
 
 
 export async function disconnectDB() {
-    await mongoose.disconnect9()
+    await mongoose.disconnect()
 }
 
 
