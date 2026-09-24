@@ -121,23 +121,7 @@ export default function WebsiteAudit() {
             </div>
 
             {/* Mock browser preview */}
-            <div className="bg-bg-card border border-border rounded-xl overflow-hidden">
-              <div className="flex items-center gap-1.5 px-3 py-2.5 border-b border-border bg-bg-secondary">
-                <span className="w-2.5 h-2.5 rounded-full bg-state-danger/70" />
-                <span className="w-2.5 h-2.5 rounded-full bg-state-warning/70" />
-                <span className="w-2.5 h-2.5 rounded-full bg-state-success/70" />
-                <span className="ml-2 text-[11px] text-ink-muted bg-bg rounded px-2 py-0.5 truncate">
-                  {result.website}
-                </span>
-              </div>
-              <div className="p-4 space-y-2.5">
-                <div className="h-3 w-2/3 bg-white/10 rounded skeleton" />
-                <div className="h-20 w-full bg-white/5 rounded-lg border border-border" />
-                <div className="h-2.5 w-full bg-white/10 rounded" />
-                <div className="h-2.5 w-5/6 bg-white/10 rounded" />
-                <div className="h-8 w-28 bg-brand/20 rounded-lg border border-brand/30" />
-              </div>
-            </div>
+
           </div>
         </>
       )}

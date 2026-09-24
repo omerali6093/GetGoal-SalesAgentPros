@@ -9,9 +9,8 @@ import Opportunities from './pages/Opportunities.jsx'
 import WebsiteAudit from './pages/WebsiteAudit.jsx'
 import LeadDetails from './pages/LeadDetails.jsx'
 import Outreach from './pages/Outreach.jsx'
-import Campaigns from './pages/Campaigns.jsx'
-import Analytics from './pages/Analytics.jsx'
-import Settings from './pages/Settings.jsx'
+
+
 
 export default function App() {
   return (
@@ -25,9 +24,6 @@ export default function App() {
         <Route path="/website-audit" element={<WebsiteAudit />} />
         <Route path="/leads/:id" element={<LeadDetails />} />
         <Route path="/outreach" element={<Outreach />} />
-        <Route path="/campaigns" element={<Campaigns />} />
-        <Route path="/analytics" element={<Analytics />} />
-        <Route path="/settings" element={<Settings />} />
       </Route>
     </Routes>
   )
