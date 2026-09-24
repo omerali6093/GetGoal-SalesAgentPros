@@ -86,96 +86,10 @@ export default function Dashboard() {
           </ResponsiveContainer>
         </div>
 
-        <div className="bg-bg-card border border-border rounded-xl p-5">
-          <h2 className="text-sm font-semibold text-ink mb-1">Conversion Funnel</h2>
-          <p className="text-xs text-ink-muted mb-3">From discovery to converted client</p>
-          <div className="space-y-2.5 mt-4">
-            {conversionFunnel.map((stage, i) => {
-              const pct = Math.round((stage.value / conversionFunnel[0].value) * 100)
-              return (
-                <div key={stage.stage}>
-                  <div className="flex justify-between text-xs mb-1">
-                    <span className="text-ink-muted">{stage.stage}</span>
-                    <span className="text-ink font-medium">{stage.value.toLocaleString()}</span>
-                  </div>
-                  <div className="w-full h-2 bg-white/5 rounded-full overflow-hidden">
-                    <div
-                      className="h-2 rounded-full bg-gradient-to-r from-brand to-brand-accent"
-                      style={{ width: `${pct}%` }}
-                    />
-                  </div>
-                </div>
-              )
-            })}
-          </div>
-        </div>
+        
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
-        {/* Top opportunities table */}
-        <div className="lg:col-span-2 bg-bg-card border border-border rounded-xl overflow-hidden">
-          <div className="flex items-center justify-between px-5 pt-5 pb-3">
-            <h2 className="text-sm font-semibold text-ink">Top Opportunities</h2>
-            <button onClick={() => navigate('/opportunities')} className="text-xs text-brand-accent hover:underline">
-              View all
-            </button>
-          </div>
-          <div className="overflow-x-auto">
-            <table className="w-full text-sm">
-              <thead>
-                <tr className="text-left text-xs text-ink-muted border-t border-border">
-                  <th className="font-medium px-5 py-2.5">Business</th>
-                  <th className="font-medium px-3 py-2.5 hidden md:table-cell">Industry</th>
-                  <th className="font-medium px-3 py-2.5 hidden lg:table-cell">Location</th>
-                  <th className="font-medium px-3 py-2.5">Website</th>
-                  <th className="font-medium px-3 py-2.5">Score</th>
-                  <th className="font-medium px-5 py-2.5">Status</th>
-                </tr>
-              </thead>
-              <tbody>
-                {topOpportunities.map((b) => (
-                  <tr
-                    key={b.id}
-                    onClick={() => navigate(`/businesses/${b.id}`)}
-                    className="border-t border-border hover:bg-white/[0.03] cursor-pointer transition-colors"
-                  >
-                    <td className="px-5 py-3 text-ink font-medium">{b.name}</td>
-                    <td className="px-3 py-3 text-ink-muted hidden md:table-cell">{b.industry}</td>
-                    <td className="px-3 py-3 text-ink-muted hidden lg:table-cell">{b.location.split(',')[0]}</td>
-                    <td className="px-3 py-3">
-                      <Badge variant={websiteStatusVariant(b.websiteStatus)}>{b.websiteStatus}</Badge>
-                    </td>
-                    <td className="px-3 py-3 font-semibold text-ink">{b.opportunityScore}</td>
-                    <td className="px-5 py-3">
-                      <Badge variant={scoreVariant(b.opportunityScore)}>
-                        {b.opportunityScore >= 80 ? 'High Opportunity' : 'Qualified'}
-                      </Badge>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <div className="space-y-5">
-          <AIAgentStatus />
-          <div className="bg-bg-card border border-border rounded-xl p-5">
-            <h2 className="text-sm font-semibold text-ink mb-3">Recent Agent Activity</h2>
-            <ul className="space-y-3">
-              {agentActivityLog.map((a) => (
-                <li key={a.id} className="flex items-start gap-2.5 text-xs">
-                  <span className="w-1.5 h-1.5 rounded-full bg-brand-accent mt-1.5 shrink-0" />
-                  <div>
-                    <p className="text-ink-muted leading-relaxed">{a.text}</p>
-                    <p className="text-ink-muted/60 mt-0.5">{a.time}</p>
-                  </div>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </div>
+    
     </div>
   )
 }

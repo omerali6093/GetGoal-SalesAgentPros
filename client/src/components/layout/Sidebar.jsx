@@ -39,7 +39,7 @@ export default function Sidebar({ collapsed, onToggle, mobileOpen, onCloseMobile
           </div>
           {!collapsed && (
             <span className="font-semibold text-[15px] tracking-tight text-ink whitespace-nowrap">
-              SalesPilot <span className="text-brand-accent">AI</span>
+              GetGoal <span className="text-brand-accent">SalesAI</span>
             </span>
           )}
         </div>

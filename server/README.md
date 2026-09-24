@@ -424,3 +424,18 @@ Key fields relevant to AI/RAG (full schemas live in `src/models/`):
 - [ ] Add streaming responses for outreach draft generation (SSE) to the frontend
 - [ ] Add per-agency knowledge bases (multi-tenant vector filtering by `agencyId`)
 - [ ] Evaluate self-hosted reranking (e.g. `bge-reranker`) to improve retrieval precision before generation
+
+
+
+## PHASES FOR DEVELOPING BACKEND
+Phase 0  Bootstrap                  ──► server runs
+Phase 1  Models                     ──► collections exist
+Phase 2  Auth                       ──► protected routes work
+Phase 3  Core CRUD                  ──► frontend renders real data
+Phase 4  Discovery/audit scoring    ──► real leads get generated
+Phase 5  LLM provider               ──► one working generate() call
+Phase 6  RAG storage/retrieval      ──► similarity search works
+Phase 7  RAG pipeline + prompts     ──► grounded generation works
+Phase 8  AI endpoints               ──► frontend AI features go live
+Phase 9  Embedding freshness jobs   ──► new data stays searchable
+Phase 10 Hardening                  ──► tests, rate limits, docker
