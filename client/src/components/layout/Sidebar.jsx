@@ -5,6 +5,7 @@ import {
   Megaphone, Send, BarChart3, Settings, Radar, ChevronsLeft, ChevronsRight,
 } from 'lucide-react'
 import AIAgentStatus from '../ui/AIAgentStatus.jsx'
+import logo from "../../assets/getgoal-logo.png";
 
 const navItems = [
   { to: '/', label: 'Dashboard', icon: LayoutDashboard, end: true },
@@ -34,9 +35,12 @@ export default function Sidebar({ collapsed, onToggle, mobileOpen, onCloseMobile
         `}
       >
         <div className="flex items-center gap-2.5 h-16 px-5 border-b border-border shrink-0">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-brand to-brand-accent flex items-center justify-center shrink-0">
-            <Radar size={17} className="text-white" />
-          </div>
+          {/* <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-brand to-brand-accent flex items-center justify-center shrink-0"> */}
+            {/* <Radar size={17} className="text-white" /> */}
+            <div className='w-26 h-30'>
+            <img src={logo} alt="" />
+            </div>
+          {/* </div> */}
           {!collapsed && (
             <span className="font-semibold text-[15px] tracking-tight text-ink whitespace-nowrap">
               GetGoal <span className="text-brand-accent">SalesAI</span>
