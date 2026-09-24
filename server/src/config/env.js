@@ -10,7 +10,6 @@ function getMissing() {
 export function assertRequiredEnv() {
   const missing = getMissing()
   if (missing.length > 0) {
-    // eslint-disable-next-line no-console
     console.error(
       `[env] Missing required environment variable(s): ${missing.join(', ')}\n` +
       '[env] Copy .env.example to .env and fill in the values before starting the server.',
