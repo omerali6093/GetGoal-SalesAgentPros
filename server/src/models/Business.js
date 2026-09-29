@@ -138,3 +138,9 @@ const businessSchema = new Schema(
     },
     { timestamps: true },
 )
+
+businessSchema.index({ industry: 1, location: 1 })
+businessSchema.index({ websiteStatus: 1 })
+businessSchema.index({ name: text })
+
+export default model("Business", businessSchema     )
