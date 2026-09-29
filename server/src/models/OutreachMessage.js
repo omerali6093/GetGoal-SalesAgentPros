@@ -23,7 +23,7 @@ const outreachMessageSchema = new Schema(
     },
     subject: {
       type: String,
-      default: null, // only used for channel: 'email'
+      default: null, 
     },
     body: {
       type: String,
@@ -41,7 +41,7 @@ const outreachMessageSchema = new Schema(
     refinedFrom: {
       type: Schema.Types.ObjectId,
       ref: 'OutreachMessage',
-      default: null, // points to the draft this one was refined from, if any
+      default: null, 
     },
     createdBy: {
       type: Schema.Types.ObjectId,
