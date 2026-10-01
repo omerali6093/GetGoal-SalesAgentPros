@@ -1,4 +1,4 @@
-# SalesPilot AI — Backend
+# GetGoalSales Agent — Backend
 
 Node.js / Express / MongoDB backend for the SalesPilot AI sales intelligence
 platform, with a **free, self-hostable LLM** (Ollama) and a **Retrieval-Augmented
