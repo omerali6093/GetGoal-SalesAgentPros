@@ -36,9 +36,27 @@ export const env = {
 
     mongodbUri: process.env.MONGODB_URI,
 
-    isProduction:
-        process.env.NODE_ENV === "production",
+    jwtSecret: process.env.JWT_SECRET || 'dev_only_insecure_secret_change_me',
+  jwtExpiresIn: process.env.JWT_EXPIRES_IN || '7d',
 
-    isTest:
-        process.env.NODE_ENV === "test",
+//   llmProvider: process.env.LLM_PROVIDER || 'ollama',
+
+//   ollamaBaseUrl: process.env.OLLAMA_BASE_URL || 'http://localhost:11434',
+//   ollamaModel: process.env.OLLAMA_MODEL || 'llama3.1:8b',
+//   ollamaEmbedModel: process.env.OLLAMA_EMBED_MODEL || 'nomic-embed-text',
+
+//   groqApiKey: process.env.GROQ_API_KEY || '',
+//   groqModel: process.env.GROQ_MODEL || 'llama-3.3-70b-versatile',
+
+//   ragTopK: Number(process.env.RAG_TOP_K) || 5,
+//   ragChunkSize: Number(process.env.RAG_CHUNK_SIZE) || 500,
+//   ragChunkOverlap: Number(process.env.RAG_CHUNK_OVERLAP) || 50,
+//   vectorIndexName: process.env.VECTOR_INDEX_NAME || 'knowledge_vector_index',
+
+
+    isProduction: process.env.NODE_ENV === "production",
+    isTest: process.env.NODE_ENV === "test",
+
+        
+
 };
